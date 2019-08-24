@@ -1,0 +1,30 @@
+{
+  "name": "traveloka-calendar",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+  "hapi": "^16.6.2",
+  "hapi-swagger": "^8.0.0",
+  "inert": "^4.2.1",
+  "joi": "^13.0.1",
+  "moment": "^2.19.1",
+  "mongoose": "^4.12.4",
+  "mongoose-timestamp": "^0.6.0",
+  "vision": "^4.1.1",
+  "dependencies": {
+    "hapi": "^16.6.2",
+    "hapi-swagger": "^8.0.0",
+    "inert": "^4.2.1",
+    "joi": "^13.0.1",
+    "moment": "^2.19.1",
+    "mongoose": "^4.12.4",
+    "mongoose-timestamp": "^0.6.0",
+    "nodemon": "^1.19.1",
+    "vision": "^4.1.1"
+  }
+}
