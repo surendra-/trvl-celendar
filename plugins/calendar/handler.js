@@ -52,7 +52,14 @@ funcs.addMeetingRoom  = (request, reply) =>{
 
 funcs.updateMeeting = (request, reply)=>{
     const meetingId = request.params.id;
-    Meeting.update({_id: ObjectId(meetingId)}, {meetingRoom: request.payload}, (err, res)=>{
+    Meeting.update({_id: ObjectId(meetingId)}, request.payload, (err, res)=>{
+        if(err) return reply({status:false, message:err});
+        return reply({status:true, data:res});
+    })
+}
+
+funcs.getAllMeetings = (request, reply) =>{
+    Meeting.find((err, res)=>{
         if(err) return reply({status:false, message:err});
         return reply({status:true, data:res});
     })

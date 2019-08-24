@@ -47,12 +47,20 @@ exports.register = function (server, options, next) {
 		    handler: controller.addMeetingRoom
 		},
 		{
-		    method: 'POST',								
-		    path: '/api/v1/meetings/:id',
+		    method: 'PUT',								
+		    path: '/api/v1/meetings/{id}',
 		    config:{
 		    	tags: ['api'],
 		    },
 		    handler: controller.updateMeeting
+		},
+		{
+		    method: 'GET',								
+		    path: '/api/v1/meetings',
+		    config:{
+		    	tags: ['api'],
+		    },
+		    handler: controller.getAllMeetings
 		},
 	]);
     next();
